@@ -73,41 +73,6 @@ steps:
           echo "Gofile QR Code = ${{ steps.gofile.outputs.qrcode }}"
 ```
 
-## 💻 Gofile API Upload File Example
-
-Looking for a **Gofile API upload file example** without GitHub Actions? You can use the underlying logical approach of this action in your own Node.js scripts:
-
-```javascript
-const Gofile = require("gofile");
-// Or usage with axios example provided previously
-```
-
-(Wait, I should keep the code block intact)
-
-```javascript
-const axios = require("axios");
-const fs = require("fs");
-const FormData = require("form-data");
-
-async function uploadToGofile(filePath, token) {
-    const form = new FormData();
-    form.append("file", fs.createReadStream(filePath));
-
-    const response = await axios.post(
-        "https://upload.gofile.io/uploadfile",
-        form,
-        {
-            headers: {
-                ...form.getHeaders(),
-                Authorization: "Bearer " + token,
-            },
-        }
-    );
-
-    console.log("Download Page:", response.data.data.downloadPage);
-}
-```
-
 ## 📦 Publishing a New Version
 
 To publish a new version of this Action:
