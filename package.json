@@ -1,6 +1,6 @@
 {
     "name": "action-upload-gofile",
-    "version": "2.1.0",
+    "version": "3.0.0",
     "description": "📦 GitHub Action for uploading files to Gofile",
     "main": "index.js",
     "scripts": {
@@ -32,13 +32,15 @@
     },
     "homepage": "https://github.com/ahnafnafee/action-upload-gofile#readme",
     "dependencies": {
-        "@actions/core": "^1.9.1",
-        "axios": "^0.27.2",
+        "@actions/core": "^2.0.1",
+        "axios": "^1.13.2",
         "fs": "0.0.1-security",
         "path": "0.12.7"
     },
     "devDependencies": {
-        "@vercel/ncc": "^0.31.1",
-        "eslint": "^8.18.0"
+        "@eslint/js": "^9.39.2",
+        "@vercel/ncc": "^0.38.4",
+        "eslint": "^9.39.2",
+        "globals": "^16.5.0"
     }
 }
